@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/demo-deploy2",
+          "awslogs-group": "/ecs/demo",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -31,7 +31,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "584603588226.dkr.ecr.us-east-2.amazonaws.com/demo-deploy",
+      "image": "584603588226.dkr.ecr.us-east-2.amazonaws.com/demo-deploy:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -53,13 +53,13 @@
   ],
   "placementConstraints": [],
   "memory": "1024",
-  "taskRoleArn": "arn:aws:iam::584603588226:role/ecsTaskExecutionRole",
+  "taskRoleArn": null,
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:584603588226:task-definition/demo-deploy2:1",
-  "family": "demo-deploy2",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:584603588226:task-definition/demo:1",
+  "family": "demo",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -84,12 +84,6 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.task-iam-role"
     },
     {
       "targetId": null,
